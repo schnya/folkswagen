@@ -104,7 +104,14 @@ class _TableComplexExampleState extends State<TableComplexExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: color1[100],
+        decoration: BoxDecoration(
+          color: color1[100],
+          image: const DecorationImage(
+            image: AssetImage('assets/IMG_7126.jpg'),
+            fit: BoxFit.contain,
+            alignment: Alignment.topCenter,
+          ),
+        ),
         width: size.width,
         height: size.height,
         child: Column(

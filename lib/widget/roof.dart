@@ -34,21 +34,15 @@ class CurveClipper extends CustomClipper<Path> {
     double curveHeight = 3 * 13.0; //曲線の高さ
 
     Path path = Path()
-      ..moveTo(0, size.height)
-      ..lineTo(0, curveHeight * 4 / 3)
-      ..quadraticBezierTo(0, curveHeight * 5 / 4, size.width / 5, curveHeight)
+      ..moveTo(0, curveHeight)
+      ..lineTo(size.width / 5, curveHeight)
       ..quadraticBezierTo(
         size.width / 2,
-        -curveHeight,
+        0,
         size.width * 4 / 5,
         curveHeight,
       )
-      ..quadraticBezierTo(
-        size.width,
-        curveHeight * 5 / 4,
-        size.width,
-        curveHeight * 4 / 3,
-      )
+      ..lineTo(size.width, curveHeight)
       ..lineTo(size.width, size.height)
       ..lineTo(0, size.height)
       ..close(); //最初の位置まで戻る

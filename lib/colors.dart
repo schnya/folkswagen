@@ -10,13 +10,9 @@ const ColorSwatch color1 = ColorSwatch(
 );
 
 final List<BoxShadow> shadow = [
-  const BoxShadow(
-    color: Colors.white,
-    offset: Offset(.0, -3.0),
-    blurRadius: 3.0,
-  ),
+  const BoxShadow(color: Colors.white, offset: Offset(.0, -3), blurRadius: 3),
   BoxShadow(
-    color: color1[100]!.withOpacity(.25),
+    color: color1[100]!,
     offset: const Offset(.0, 6.0),
     blurRadius: 6.0,
   ),
